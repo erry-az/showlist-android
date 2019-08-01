@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sdp"
+        android:layout_marginBottom="@dimen/sdp"
+        style="@style/CardView.Clickable"
+        app:cardBackgroundColor="@color/colorSecondary"
+        app:cardCornerRadius="4dp"
+        android:id="@+id/cv.item_show">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/iv_poster.item_show"
+                android:layout_width="@dimen/poster_preview_width"
+                android:layout_height="@dimen/poster_preview_height"
+                android:background="@color/colorSecondaryLight"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:contentDescription="@string/poster"
+                tools:src="@tools:sample/avatars"/>
+
+        <TextView
+                android:id="@+id/tv_title.item_show"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/iv_poster.item_show"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_poster.item_show"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:layout_margin="@dimen/sdp"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="@tools:sample/full_names"/>
+
+        <TextView
+                android:id="@+id/tv_desc.item_show"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_title.item_show"
+                app:layout_constraintStart_toStartOf="@id/tv_title.item_show"
+                app:layout_constraintEnd_toEndOf="@id/tv_title.item_show"
+                android:maxLines="5"
+                style="@style/TextAppearance.AppCompat.Caption"
+                tools:text="@tools:sample/lorem/random"
+                app:layout_constraintBottom_toTopOf="@+id/tv_date.item_show"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginTop="@dimen/sdp"/>
+
+        <ImageView android:id="@+id/iv_block.item_show"
+                   android:layout_width="0dp" android:layout_height="0dp"
+                   android:background="@color/colorSecondaryDark"
+                   app:layout_constraintTop_toTopOf="@id/tv_date.item_show"
+                   app:layout_constraintBottom_toBottomOf="@id/tv_date.item_show"
+                   app:layout_constraintStart_toStartOf="@id/tv_date.item_show"
+                   app:layout_constraintEnd_toEndOf="@id/tv_date.item_show"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:gravity="center"
+                android:paddingBottom="@dimen/sdp"
+                android:paddingTop="@dimen/sdp"
+                tools:text="@tools:sample/date/ddmmyy"
+                android:id="@+id/tv_date.item_show"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_poster.item_show"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

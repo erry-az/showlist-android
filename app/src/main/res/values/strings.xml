@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Show</string>
+    <string name="tab_text_1">Movie</string>
+    <string name="tab_text_2">TV Show</string>
+    <string name="poster">Poster</string>
+</resources>
