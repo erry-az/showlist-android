@@ -13,30 +13,29 @@
 
             <ImageView
                     android:id="@+id/iv_poster.show_detail"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title.show_detail"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     android:background="@color/colorSecondaryLight"
-                    android:layout_marginTop="@dimen/ddp"
                     android:layout_marginStart="@dimen/ddp"
                     android:layout_width="@dimen/poster_width"
-                    android:layout_height="@dimen/poster_height"/>
+                    android:layout_height="@dimen/poster_height" android:layout_marginTop="@dimen/ddp"/>
 
             <TextView
                     android:id="@+id/tv_title.show_detail"
                     app:layout_constraintStart_toStartOf="@id/iv_poster.show_detail"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/iv_poster.show_detail"
-                    android:layout_margin="@dimen/ddp"
                     android:padding="@dimen/sdp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:singleLine="true"
-                    android:ellipsize="marquee"
+                    android:maxLines="2"
+                    android:ellipsize="end"
                     style="@style/TextAppearance.MaterialComponents.Headline6"
                     android:background="@color/colorSecondaryDark"
                     tools:text="@tools:sample/full_names"
-                    tools:layout_editor_absoluteY="16dp"/>
+                    android:layout_marginTop="@dimen/ddp"
+                    android:layout_marginEnd="@dimen/ddp"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                     android:id="@+id/tv_date_title.show_detail"
@@ -53,7 +52,7 @@
                     android:ellipsize="marquee"
                     style="@style/TextAppearance.MaterialComponents.Subtitle1"
                     android:background="@color/colorPrimary"
-                    tools:text="Release Date"
+                    android:text="@string/release_date"
                     tools:layout_editor_absoluteY="16dp"/>
 
             <TextView
@@ -98,10 +97,16 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_rating_title.show_detail"
                     app:layout_constraintEnd_toEndOf="@id/tv_rating_title.show_detail"
                     android:layout_marginTop="@dimen/ddp"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:scaleX=".8"
+                    android:rating="5"
+                    android:scaleY=".8"
                     android:max="5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_poster.show_detail"/>
+                    android:layout_height="wrap_content"
+                    android:longClickable="false"
+                    android:clickable="false"
+                    app:layout_constraintStart_toStartOf="@+id/tv_rating_title.show_detail"/>
 
             <TextView
                     android:id="@+id/tv_desc.show_detail"
